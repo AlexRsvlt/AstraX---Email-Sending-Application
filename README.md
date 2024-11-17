@@ -1,1 +1,0 @@
-# AstraX---Email-Sending-Application
