@@ -13,7 +13,6 @@ Welcome to the Email Sending Application! This project allows users to create an
 3. [Email Scheduling and Throttling](#email-scheduling-and-throttling)  
 4. [Usage Instructions](#usage-instructions)  
 5. [Contributing](#contributing)  
-6. [License](#license)  
 
 ---
 
