@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body style="justify-content: flex-start;">
+    <!-- Navbar with Logo -->
+    <header class="dashboard-header">
+        <div class="brand-logo">
+            <img src="static/logo.png" alt="Logo" class="logo">
+            <h1>Dashboard</h1>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Content -->
+    <div class="dashboard-container">
+        <!-- Left Side: Prompt Input Box -->
+        <div class="prompt-box">
+            <h2>Email Prompt</h2><hr><br>
+            <textarea id="prompt-input" placeholder="Write your email prompt here... e.g., Hello {Name}, welcome to {Company}!" rows="10"></textarea>
+            <button type="button" class="action-button" id="preview-button">Preview Emails</button>
+            <button type="button" class="action-button" id="send-emails-button">Send Emails</button>
+            <div id="email-preview-container" class="email-preview">
+                <!-- Email previews will appear here -->
+            </div>
+            <div id="api-status" class="api-status"></div>
+        </div>        
+        
+
+        <!-- Right Side: File Upload Box -->
+        <div class="upload-box">
+            <h2>Upload Recipients</h2><hr><br>
+            <p>Select a Google Sheet or CSV file:</p>
+            <input type="file" accept=".csv" id="file-input">
+            <button type="button" id="upload-button" class="action-button">Upload File</button>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="scheduling-box">
+            <h2>Email Scheduling</h2><hr><br>
+            <label for="schedule-time">Schedule Time:</label>
+            <input type="datetime-local" id="schedule-time">
+            
+            <label for="batch-size">Emails per Batch:</label>
+            <input type="number" id="batch-size" placeholder="e.g., 50">
+            
+            <label for="batch-interval">Interval Between Batches (minutes):</label>
+            <input type="number" id="batch-interval" placeholder="e.g., 60">
+            
+            <button type="button" id="schedule-emails-button" class="action-button">Schedule Emails</button>
+        </div>
+
+        <div id="analytics-dashboard">
+            <h2>Real-Time Analytics</h2><hr><br>
+            <div class="analytics-counter">
+                <p>Total Emails Sent: <span id="total-sent">0</span></p>
+            </div>
+            <div class="analytics-counter">
+                <p>Emails Pending: <span id="emails-pending">0</span></p>
+            </div>
+            <div class="analytics-counter">
+                <p>Emails Scheduled: <span id="emails-scheduled">0</span></p>
+            </div>
+            <div class="analytics-counter">
+                <p>Emails Failed: <span id="emails-failed">0</span></p>
+            </div>
+        </div>
+          
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Real-Time Email Tracking Table -->
+    <div class="email-status-dashboard">
+        <h2>Email Status Dashboard</h2><hr><br>
+        <table id="email-status-table">
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Recipient</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Delivery Status</th>
+                    <th>Opened</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <div id="progress-bar-container">
+            <progress id="email-sending-progress" value="0" max="100"></progress>
+            <span id="progress-text">0% Sent</span>
+        </div>
+    </div>
+        
+    </div>
+
+        
+
+    <script>
+        console.log("Inline script test: dashboard HTML is running JavaScript.");
+    </script>
+    
+    <script src="static/script.js"></script>
+</body>
+</html>

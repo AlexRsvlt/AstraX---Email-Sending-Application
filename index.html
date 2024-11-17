@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Signup Page</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="brand-logo">
+            <img src="static/logo.png" alt="Red Logo" class="logo">
+            <h1>AstraX</h1>
+        </div>
+    </header>
+    <div class="login-wrapper">
+        <div class="image-container">
+            <img src="static/pic.jpg" alt="Side Image">
+        </div>
+        <div class="form-container"><br><br><br>
+            <h2>Let's Get Started.</h2>
+            <p>Please login or sign up to continue</p><br>
+            <form onsubmit="return loginUser(event)">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Your Password" required>
+                </div>
+                <button type="submit" class="sign-up-button">Log In</button>
+                <button type="button" class="google-signup">
+                    <img src="static/google.png" alt="Google Icon"> Sign in with Google
+                </button>
+            </form>
+            
+            <p class="login-link">Already Have An Account? <a href="#">Login</a></p>
+        </div>
+    </div>
+    
+
+    <script src="static/script.js"></script>
+</body>
+</html>
